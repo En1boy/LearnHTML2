@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    background: #be7cd6;
+    color: #353536;
+}
+
+.header {
+    padding: 4px;
+    text-align: center;
+    background: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.header h1 {
+    font-size: 30px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.topnav a:hover {
+    background-color: red;
+    color: black;
+}
+
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #be7cd6;
+    padding-left: 20px;
+}
+
+.card {
+    background-color: #f3defa;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    padding: 10px;
+    color: rgb(226, 226, 226);;
+    text-align: left;
+    background: #333;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-transform: lowercase;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #cbc8cf;
+    color: #353536;
+    border: 16px solid #cbc8cf;
+    border-radius: 20px;
+}
+th {
+    font-size: 18px;
+    padding: 10px;
+}
+td {
+    background: #feffd4;
+    padding: 10px;
+}
+
+td:nth-child(even) {background-color: rgb(233, 215, 164);}
+
+.form {
+    height: 440px;
+    background: #f3defa;
+    border-radius: 20px;
+    margin-top: 25px;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+}
+input:focus {
+    border-bottom: 2px solid #78788c;
+}
+p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+.knopka {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.knopka:hover {
+    background: #78788c;
+    color: #fff;
+}
+
+.knopka_2 {
+    padding: 10px 16px;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.knopka_2:hover {
+    background: #78788c;
+    color: #fff;
+}
+
+.img_1:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.img_2 {
+    padding-right: 10px;
+}
+
+.img_2:hover {
+    transform: scale(-1, 1);
+    padding-left: 10px;
+}
+
+a.img_3{
+    background-image: url(img_3.jpg);
+    float: right;
+    width: 230px;
+    height: 230px;
+    border-radius: 20px;
+    padding-right: 3px;
+}
+
+a.img_3:hover {
+    background-image: url(img_3_2.jpg);
+    float: right;
+    width: 230px;
+    height: 230px;
+    border-radius: 20px;
+    padding-right: 3px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>My first site<3</h1>
+</div>
+
+<div class="topnav">
+    <a href="#">О фонке</a> 
+    <a href="#">История</a>
+    <a href="#">Особенность</a>
+    <a href="#">Расписание</a>
+    <a href="#" style="float:right">Выход</a>
+</div>
+
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>О фонке</h2>
+            <img class="img_1" src="https://i1.sndcdn.com/artworks-2fIlfCvjIf4p3gpv-ufnCYA-t500x500.jpg" alt="??????????????" style="float:right;width:230px;height:230px; border-radius: 20px; padding: 3px;">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Фонк</strong> — поджанр хип-хопа, вдохновлённый Мемфис-рэпом 1990-х годов. Больше всего представлен на платформе SoundCloud, характеризуется ностальгическими семплами фанка, кассетным звучанием, взятым из LO-FI и часто аккомпанирующимися старыми вокальными записями в стиле Мемфис-рэпа. В жанре обычно используются хип-хоп семплы ранних 1990-х годов, соединённые с джазовыми мотивами</p>
+            <p>Изначально фонк сильно отличался от того что мы слышим сейчас. Это был тот же гангстер рэп только при добавление другого жанра Хорроркора.Тогда в Мемфисе было беззаконие, в городе были расставлены густо населенные районы и парни с бедных семей стали присоединяться к банде по месту их рождения. И когда две банды встречаются друг другу то начинается перестрелки и схватки. И спустя 30 лет Мемфис все ровно остается лидирующим городом в США по количеству разбоев, убийств, ограблений и другого.</p>
+            <div style="clear:both"></div>
+            <p>До сих пор не известно кто стал первым исполнителем в мемфис рэпе потому что большинство музыки выходила на кассетах и виниловых пластинках которые были потеряны со временем. Многие говорят что первый кто начел читать в этом стиле был DJ Spanish Fly и его альбом вышел в 1990 году.</p>
+        </div>
+        <div class="card">
+            <h2>История</h2>
+            <img class="img_2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqDQtMYdq18gm8BRGLpUtHTHA9hYJVYvGNA&usqp=CAU" alt="xdxdxdxd" style="float:left;width:230px;height:230px; border-radius: 20px;" >
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Часто фонк определяется как <i>«музыка поколения Z»</i>, первыми этот стиль начали использовать мемфисские артисты DJ Paul, X-Raided, Phonk Beta, Tommy Wright III и коллектив Three 6 Mafia. Первая волна фонка утихла в конце 2000-х, но уже в начале 2010-х стиль пережил возрождение. Слово «фонк» стало популярным благодаря SpaceGhostPurrp, выпустившему треки Pheel Tha Phonk, Bringin' Tha Phonk, и Keep Bringin' Tha Phonk. YouTube-каналы, в особенности, TrillPhonk, также сыграли большую роль в популяризации фонка.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На протяжении нескольких лет фонк перемещался на SoundCloud, оказывая кроме того влияние на творчество таких рэперов, как XXXTentacion, Ski Mask the Slump God, Trippie Redd и других. Фонк является смягчённым вариантом трэпа, отличаясь от него отсутствием «шершавого, тёмного, Мемфис-ориентированного звучания», отдавая большее предпочтение джазу и классическому хип-хопу. В 2016—2018 годах, фонк стал одним из наиболее слушаемых жанров на SoundCloud, а хэштег #phonk оказывался самым популярным.</p>
+            <div style="clear:both"></div>
+        </div>
+        <div class="card">
+            <h2>Особенность</h2>
+            <a href="#" class="img_3"></a>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Особенностью фонка</u> является его непривязанность к какой-либо региональной <abbr>«сцене»</abbr>. Это связано с особенностями платформы SoundCloud, которая обычно выделяет поджанры хип-хопа и экспериментального попа. Фонк-артист Lowpocus в интервью 2017 года сказал: <q> Что удивительно в фонке — исполнители есть на всех частях света. Ты можешь найти фонк-исполнителей в Канаде, США, во Франции и даже в России!</q>.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Самая радикальная разница между фонком и мемфис-рэпом в том, что хип-хоп исполнители из Мемфиса первыми начали использовать так называемый triplet flow. Это когда во время одного клика в бите используется не две или четыре ноты, а три. Этот вид читки ещё иногда называют migos flow или versace flow.В то же время большинство исполнителей фонк-музыки предпочитают классический флоу.</p>
+        </div>
+        <div class="card">
+            <h2>Расписание(числитель)</h2>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Время</th>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                    </tr>
+                    <tr>
+                        <td>08.30-10.00</td>
+                        <td></td>
+                        <td>Ин.язык(1 п.)</td>
+                        <td>ООП(2 п.)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10.10-11.40</td>
+                        <td></td>
+                        <td>Выч.мат(1 п.)</td>
+                        <td>Прог-е(2 п.)</td>
+                        <td>Выч.мат</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12.10-13.40</td>
+                        <td></td>
+                        <td>Прог-е(1 п.)</td>
+                        <td>Физра</td>
+                        <td>Мат.анализ</td>
+                        <td>Прог-е</td>
+                    </tr>
+                    <tr>
+                        <td>13.50-15.20</td>
+                        <td>ООП(1 п.)</td>
+                        <td>Прог-е(2 п.)</td>
+                        <td>Прог-е(1 п.)</td>
+                        <td>Мат.анализ</td>
+                        <td>ООП</td>
+                    </tr>
+                    <tr>
+                        <td>15.30-17.00</td>
+                        <td>Типы данных(1.п)</td>
+                        <td>Выч.мат(2 п.)</td>
+                        <td></td>
+                        <td>Истрия</td>
+                        <td>Выч.мат</td>
+                    </tr>
+                    <tr>
+                        <td>17.10-18.40</td>
+                        <td>Типы данных</td>
+                        <td>Ин.язык</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18.45-20.15</td>
+                        <td>Типы данных</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Расписание(знаменатель)</h2>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Время</th>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                        <th>Суббота</th>
+                    </tr>
+                    <tr>
+                        <td>08.30-10.00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>                       
+                    </tr>
+                    <tr>
+                        <td>10.10-11.40</td>
+                        <td>Физра</td>
+                        <td></td>
+                        <td>Ин.язык(2 п.)</td>
+                        <td>Ин.язык(2 п.)</td>
+                        <td>Ин.язык(1 п.)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12.10-13.40</td>
+                        <td>Прог-е</td>
+                        <td>Прог-е(1 п.)</td>
+                        <td>ООП(2 п.)</td>
+                        <td>История</td>
+                        <td>Ин.язык(1 п.)</td>
+                        <td>Мат.анализ</td>
+                    </tr>
+                    <tr>
+                        <td>13.50-15.20</td>
+                        <td>Типы данных</td>
+                        <td>Прог-е(1 п.)</td>
+                        <td>ООП</td>
+                        <td>История</td>
+                        <td>Прог-е(2 п.)</td>
+                        <td>Мат.анализ</td>
+                    </tr>
+                    <tr>
+                        <td>15.30-17.00</td>
+                        <td>Типы данных(2 п.)</td>
+                        <td></td>
+                        <td>ООП(1 п.)</td>
+                        <td></td>
+                        <td>Прог-е(2 п.)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17.10-18.40</td>
+                        <td></td>
+                        <td></td>
+                        <td>Типы данных(1 п.)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18.45-20.15</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>    
+    </div>
+    <div class="rightcolumn">   
+            <form class="form">
+                <h2>Связь со мной</h2>
+                <p type="Фамилия Имя Отчество:"><input placeholder="Введите здесь"></input></p>
+                <p type="Почта:"><input placeholder="Зарегистрируйте почту"></input></p>
+                <p type="Телефон:"><input placeholder="Номер телефона"></input></p>
+                <button class="knopka">Отправить</button>
+            </form>
+        <div class="card">
+            <h3>Российские исполнители</h3>
+            <ul>
+                <li>DVRST</li>
+                <li><s>LXST</s> CXNTURY</li>
+                <li>takeluf</li>
+                <li>адлин</li>
+                <li>plenka</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Западные фонк исполнители</h3>
+            <ol>
+                <li>$uicideboy$</li>
+                <li>DJ Smokey</li>
+                <li>Chris Travis</li>
+                <li>Baker</li>
+                <li>Raider Klan</li>
+            </ol>
+        </div>
+        <div class="card">
+            <h3>Клип</h3>
+            <p class="aligncenter">
+                <iframe width="326" height="220" src="https://www.youtube.com/embed/59fzO8BIwDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            <p class="aligncenter">
+                <button class="knopka_2">Кнопка</button>
+            </p>
+        </div>
+        <div class="card">
+            <h3>Мои соц.сети</h3>
+            <ul>
+                <li><a href="https://vk.com/teak1yari">ВКонтакте</a></li>
+                <li><a href="https://yandex.ru/">Yandex</a></li>
+                <li><a href="https://github.com/En1boy">GitHub</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Мое местонахождение</h3>
+            <p class="aligncenter">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae4c9a3392f14b8c01c2e6f5685902626cdd449f6676291dc1382d39b9d24d9f5&amp;source=constructor" width="326" height="220" frameborder="0"></iframe>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h5>P.S. (Просто обязательный пункт в задании) a<sup>m</sup> * a<sup>n</sup> =a<sup>m+n</sup></h5>
+</div>
+
+</body>
+</html>
